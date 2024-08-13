@@ -1,0 +1,22 @@
+.productcontainer{
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    box-shadow: 0 0 10px green;
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagecon{
+    display: flex;
+    width: 400px;
+    height: 500px;
+    padding: 10px;
+}
+.contentcon{
+    display: flex;
+    width: 600px;
+    height: 500px;
+    padding: 30px;
+}

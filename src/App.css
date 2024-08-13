@@ -1,0 +1,26 @@
+#con333{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    margin-right: 50px;
+}
+#box111{
+    color: white;
+    background-color: rgb(43, 28, 112);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#box222{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 28, 112);
+    color: white;
+    display: flex;
+    width: 60%;
+}
+

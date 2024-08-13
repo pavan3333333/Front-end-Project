@@ -1,0 +1,10 @@
+.car{
+display: flex;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+}
+#corosol{
+    display: flex;
+    flex-direction:column;
+}

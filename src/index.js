@@ -20,22 +20,22 @@ import ProductDetails from './compponents/Product/ProductDetails';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 function Hp(){
     return(
-        <div><App/><About/><Carosol/><Team/><Grid/><Videos/><Info/></div>
+        <div style={{width:"150%"}}><App/><About/><Carosol/><Team/><Grid/><Videos/><Info/></div>
     )
 }
 function Add(){
     return(
-        <BrowserRouter>
+        <BrowserRouter >
         <Nav/>
-        <Routes>
-            <Route path="/" element={<Login/>}/>
+        <Routes >
+            <Route path="*" element={<Login/>}/>
             <Route path="/signin" element={<Sign/>}/>
             <Route path="/homepage" element={<Hp/>}/>
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/products" element={<ProPromise/>}/>
             <Route path="/users" element={<Users/>}/>
         <Route path="/productdetails/:id" element={<ProductDetails/>}/>
-        <Route path="*" element={<PagenF/>}/>
+        
         </Routes>
         </BrowserRouter>
     );

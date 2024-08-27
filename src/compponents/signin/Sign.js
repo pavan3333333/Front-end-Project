@@ -1,4 +1,5 @@
 import './Sign.css';
+import { Link } from "react-router-dom";
 function Sign(){
     return(
         <div id="backc">
@@ -10,7 +11,7 @@ function Sign(){
             <input type="password" placeholder="Password" className='p-4 mt-2' id="in3"/><br/>
             <input type="password" placeholder="Confirm Password" className='p-4 mt-2' id="in3"/><br/>
             <p style={{color:"white"}}><input type="checkbox"/>I accept the Trems of Use & Privacy Policy</p>
-            <button id="#button1" className='btn btn-info p-3 mt-3'>Sign Up</button>
+            <Link to={`/products/`}>  <button id="#button1" className='btn btn-info p-3 mt-3'>Sign Up</button> </Link>
             <p style={{color:"white"}}>Already Having an Account?<a style={{color:"white"}} href="">Login Here</a></p>
         </div>
         </div>

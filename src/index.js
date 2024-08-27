@@ -20,7 +20,7 @@ import ProductDetails from './compponents/Product/ProductDetails';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 function Hp(){
     return(
-        <div style={{width:"150%"}}><App/><About/><Carosol/><Team/><Grid/><Videos/><Info/></div>
+        <div><App/><About/><Carosol/><Team/><Grid/><Videos/><Info/></div>
     )
 }
 function Add(){

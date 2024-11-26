@@ -1,19 +1,52 @@
 import './Sign.css';
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 function Sign(){
+    const navigate =useNavigate();
+    const [input,setInput] = useState({
+        name: "",
+        email: "",
+        password: "",
+    });
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        localStorage.setItem("user",JSON.stringify(input));
+        navigate("/Login");
+    };
     return(
         <div id="backc">
-        <div id="con22" className="text-center">
+        <form onSubmit={handleSubmit} id="con22" className="text-center">
             <h1 style={{color:"white"}}>Sign Up</h1><br/>
-            <input type="text" placeholder="First Name" className='p-4' id="in1"/>
-            <input type="text" placeholder="Last Name" className='p-4 ' id="in2"/><br/>
-            <input type="email" placeholder="Email" className='p-4 mt-2' id="in3"/><br/>
-            <input type="password" placeholder="Password" className='p-4 mt-2' id="in3"/><br/>
-            <input type="password" placeholder="Confirm Password" className='p-4 mt-2' id="in3"/><br/>
-            <p style={{color:"white"}}><input type="checkbox"/>I accept the Trems of Use & Privacy Policy</p>
-            <Link to={`/products/`}>  <button id="#button1" className='btn btn-info p-3 mt-3'>Sign Up</button> </Link>
-            <p style={{color:"white"}}>Already Having an Account?<a style={{color:"white"}} href="">Login Here</a></p>
-        </div>
+            <input
+            name="name"
+            value={input.name}
+            onChange={(e) =>
+                setInput({
+                    ... input,[e.target.name]: e.target.value,           
+                })
+            }
+             type="text" placeholder="Name" className='p-4' id="in1"/>
+            <input
+            name="email"
+            value={input.email}
+            onChange={(e) =>
+                setInput({
+                    ... input,[e.target.name]: e.target.value,           
+                })
+            }
+             type="email" placeholder="Email" className='p-4 mt-2' id="in3"/><br/>
+            <input 
+            name="password"
+            value={input.password}
+            onChange={(e) =>
+                setInput({
+                    ... input,[e.target.name]: e.target.value,           
+                })
+            }
+            type="password" placeholder="Password" className='p-4 mt-2' id="in3"/><br/>
+              <button id="#button1" className='btn btn-info p-3 mt-3'>Sign Up</button>
+        </form>
         </div>
     )
 }

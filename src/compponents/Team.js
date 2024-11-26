@@ -6,7 +6,7 @@ function Team(){
             justifyContent:"center",
             alignItems:"center",
             color:"white",
-            backgroundColor:"black"
+            backgroundColor:"green"
         }}>
             <h2>IPL TEAMS</h2>
         </div>

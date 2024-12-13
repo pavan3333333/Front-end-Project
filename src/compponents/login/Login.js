@@ -33,7 +33,7 @@ function Login(){
                     ... input,[e.target.name]: e.target.value,           
                 })
             }
-            type="text" placeholder="Email" className='p-2 ' id="inp1"/><br/>
+            type="text" placeholder="email" className='p-2 ' id="inp1"/><br/>
             <input 
              name="password"
              value={input.password}
